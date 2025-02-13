@@ -9,7 +9,8 @@
   --main-bg: #ffffff;
   --sec-bg: #f5f6fa;
   --accent: #4880ff;
-  --text-col: #202224;
+  --text-col: rgb(32, 34, 36);
+  --text-light: rgba(32, 34, 36, 0.5);
 }
 
 body {
