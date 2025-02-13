@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  /* Colors */
+  --main-bg: #ffffff;
+  --sec-bg: #f5f6fa;
+  --accent: #4880ff;
+}

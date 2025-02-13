@@ -3,7 +3,7 @@ import "./TopNav.css"
 
 const TopNav = () => {
   return (
-    <div>TopNav</div>
+    <header className='top-nav'>TopNav</header>
   )
 }
 
