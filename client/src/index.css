@@ -11,8 +11,15 @@
   --accent: #4880ff;
   --text-col: rgb(32, 34, 36);
   --text-light: rgba(32, 34, 36, 0.5);
-  --icon-cyan: #00b69b;
+  --icon-cyan: rgb(0, 182, 155);
+  --icon-cyan-light: rgba(0, 182, 155, 0.2);
   --icon-red: #f93c65;
+  --status-danger: rgb(239, 56, 38);
+  --status-danger-light: rgba(239, 56, 38, 0.2);
+  --status-process: rgb(98, 38, 239);
+  --status-process-light: rgba(98, 38, 239, 0.2);
+  --status-hold: rgb(255, 167, 86);
+  --status-hold-light: rgba(255, 167, 86, 0.2);
 }
 
 body {

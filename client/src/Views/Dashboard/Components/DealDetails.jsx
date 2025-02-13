@@ -12,12 +12,22 @@ const DealDetails = () => {
 
   const filterOrdersByMonth = (orders, month) => {
     if (month === "all") return orders;
-    
+
     return orders.filter((order) => {
       const orderMonth = new Date(order.date).getMonth(); // 0-indexed (Jan = 0, Dec = 11)
       const monthMap = {
-        jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
-        jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11
+        jan: 0,
+        feb: 1,
+        mar: 2,
+        apr: 3,
+        may: 4,
+        jun: 5,
+        jul: 6,
+        aug: 7,
+        sep: 8,
+        oct: 9,
+        nov: 10,
+        dec: 11,
       };
       return orderMonth === monthMap[month];
     });
@@ -29,7 +39,12 @@ const DealDetails = () => {
     <div className="container deal-details">
       <div className="title-line">
         <h2>Deal Details</h2>
-        <select name="month" id="month-select" value={selectedMonth} onChange={handleMonthChange}>
+        <select
+          name="month"
+          id="month-select"
+          value={selectedMonth}
+          onChange={handleMonthChange}
+        >
           <option value="all">All Orders</option>
           <option value="jan">January</option>
           <option value="feb">February</option>
@@ -65,7 +80,9 @@ const DealDetails = () => {
                 <td>{o.date}</td>
                 <td>{o.type}</td>
                 <td>{o.amount}</td>
-                <td>{o.status}</td>
+                <td>
+                  <p className={`${o.status} tag`}>{o.status}</p>
+                </td>
               </tr>
             ))}
           </tbody>
