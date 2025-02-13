@@ -1,7 +1,7 @@
-import Dashboard from "./Views/Dasboard/Dashboard";
+import {Routes, Route} from "react-router"
+import Dashboard from "./Views/Dashboard/Dashboard";
 import Products from "./Views/Products/Products";
 import OrderList from "./Views/OrderList/OrderList";
-
 
 const App = () => {
   return (
