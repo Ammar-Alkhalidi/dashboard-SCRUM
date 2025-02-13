@@ -1,6 +1,3 @@
-import React from "react";
-import "./App.css";
-import { Route, Routes } from "react-router";
 import Dashboard from "./Views/Dasboard/Dashboard";
 import Products from "./Views/Products/Products";
 import OrderList from "./Views/OrderList/OrderList";
@@ -8,7 +5,6 @@ import OrderList from "./Views/OrderList/OrderList";
 
 const App = () => {
   return (
-    <main>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/products" element={<Products/>} />
@@ -19,7 +15,6 @@ const App = () => {
         <Route path="/to-do" element={<div>To-Do</div>} />
         <Route path="/team" element={<div>Team</div>} />
       </Routes>
-    </main>
   );
 };
 

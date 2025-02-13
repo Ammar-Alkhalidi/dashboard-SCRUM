@@ -11,6 +11,8 @@
   --accent: #4880ff;
   --text-col: rgb(32, 34, 36);
   --text-light: rgba(32, 34, 36, 0.5);
+  --icon-cyan: #00b69b;
+  --icon-red: #f93c65;
 }
 
 body {
@@ -21,4 +23,9 @@ body {
 .container {
   background-color: var(--main-bg);
   border-radius: 14px;
+}
+
+section {
+  height: 100%;
+  overflow-y: auto;
 }

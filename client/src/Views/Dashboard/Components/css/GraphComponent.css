@@ -1,0 +1,5 @@
+.db-graph {
+  grid-area: 4 / 1 / 10 / 13;
+  width: 100%;
+  padding: 2rem;
+}

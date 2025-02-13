@@ -1,0 +1,69 @@
+.meta-card {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.title {
+  color: var(--text-light);
+  font-size: 1.3rem;
+}
+
+.value {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.compare-string {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.compare-string span.pos {
+  color: var(--icon-cyan);
+}
+
+.compare-string span.neg {
+  color: var(--icon-red);
+}
+
+.meta-card-trend-ic {
+  height: 24px;
+  width: auto;
+}
+
+.trend-up {
+  fill: var(--icon-cyan);
+}
+
+.trend-down {
+  fill: var(--icon-red);
+}
+
+.meta-card-icon {
+  width: 2rem;
+  height: auto;
+  position: absolute;
+  right: 1rem;
+}
+
+.total-user {
+  grid-area: 1 / 1 / 4 / 4;
+}
+.total-order {
+  grid-area: 1 / 4 / 4 / 7;
+}
+.total-sales {
+  grid-area: 1 / 7 / 4 / 10;
+}
+.total-pending {
+  grid-area: 1 / 10 / 4 / 13;
+}

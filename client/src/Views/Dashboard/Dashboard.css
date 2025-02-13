@@ -1,0 +1,22 @@
+.dashboard {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.dashboard h2 {
+  font-size: 2rem;
+  height: 2.2rem;
+}
+
+.dashboard-grid {
+  width: 100%;
+  height: calc(100% - 3.2rem);
+  /* border: 1px solid black;  */ /* debug */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  overflow-y: auto;
+  gap: 1.5rem;
+}
