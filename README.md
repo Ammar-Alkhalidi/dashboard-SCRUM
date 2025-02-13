@@ -22,6 +22,7 @@
 - `fix/<bug-description>` → Bugfixes
 - `refactor/<component-or-section>` → Code-Refactoring
 - `hotfix/<critical-bug>` → Kritische Fehlerbehebungen
+- `data/<branch-name>` → Für API abfragen / react context
 
 #### **Einen neuen Branch erstellen:**
 1. Zu `main` wechseln und aktualisieren:
