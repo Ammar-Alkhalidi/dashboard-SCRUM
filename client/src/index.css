@@ -11,6 +11,10 @@
   --accent: #4880ff;
 }
 
+body {
+  font-family: "SF Pro Display", sans-serif;
+}
+
 .container {
   background-color: var(--main-bg);
   border-radius: 14px;
