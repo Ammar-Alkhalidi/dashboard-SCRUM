@@ -9,10 +9,12 @@
   --main-bg: #ffffff;
   --sec-bg: #f5f6fa;
   --accent: #4880ff;
+  --text-col: #202224;
 }
 
 body {
   font-family: "SF Pro Display", sans-serif;
+  color: var(--text-col);
 }
 
 .container {
