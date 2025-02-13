@@ -1,4 +1,140 @@
 .deal-details {
   grid-area: 10 / 1 / 16 / 13;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.deal-details .title-line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-list {
+  width: 100%;
+}
+
+.order-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-list table tbody {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.order-list table thead tr {
+  background-color: var(--sec-bg);
+}
+
+.order-list table th {
+  text-align: left;
+}
+
+.order-list table th,
+.order-list table td {
+  padding: 1rem;
+}
+
+.order-list table tr th:first-child {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.order-list table tr th:last-child {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.Completed {
+  background-color: var(--icon-cyan-light);
+  color: var(--icon-cyan);
+}
+
+.Rejected {
+  background-color: var(--status-danger-light);
+  color: var(--status-danger);
+}
+
+.Processing {
+  background-color: var(--status-process-light);
+  color: var(--status-process);
+}
+
+.On.Hold {
+  background-color: var(--status-hold-light);
+  color: var(--status-hold);
+}
+
+.order-list .tag {
+  width: 55%;
+  padding: 0.5rem;
+  border-radius: 4.5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.order-list table thead,
+.order-list table tbody,
+.order-list table tr {
+  display: block;
+}
+
+.order-list table tbody {
+  max-height: 75px;
+  overflow-y: auto;
+  display: block;
+}
+
+.order-list table thead tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.order-list table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Scrollbar */
+
+/* Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sec-bg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darken(var(--accent), 10%);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--sec-bg);
+}
+
+/* Edge & IE */
+body {
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Optional: Versteckt die Scrollbar auf älteren Edge-Versionen */
 }
