@@ -416,5 +416,5 @@ export const OrderProvider = ({ children }) => {
 };
 
 export const useOrders = () => {
-  return useContext(ProductContext);
+  return useContext(OrderContext);
 };
