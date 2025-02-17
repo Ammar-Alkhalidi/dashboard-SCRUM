@@ -101,7 +101,7 @@ const LineChart = () => {
         },
       },
       y: {
-        beginAtZero: true,
+        beginAtZero: false,
       },
     },
   };
