@@ -22,7 +22,7 @@
 - `fix/<bug-description>` → Bugfixes
 - `refactor/<component-or-section>` → Code-Refactoring
 - `hotfix/<critical-bug>` → Kritische Fehlerbehebungen
-- `data/<branch-name>` → Für API abfragen / react context
+- `data/<branch-name>` → Für API-Abfragen / React Context
 
 #### **Einen neuen Branch erstellen:**
 1. Zu `main` wechseln und aktualisieren:
@@ -69,6 +69,26 @@
 6. Den Feature-Branch löschen (lokal & remote):
    ```sh
    git branch -d feature/<feature-name>
+   git push origin --delete feature/<feature-name>
+   ```
+
+---
+
+### **✅ Cleanup & Update nach dem Merge**
+1. Nach dem Merge zur `main`-Branch wechseln:
+   ```sh
+   git checkout main
+   ```
+2. Die neuesten Änderungen abrufen:
+   ```sh
+   git pull origin main
+   ```
+3. Lokale, nicht mehr benutzte Branches löschen:
+   ```sh
+   git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
+   ```
+4. Remote-Branch auf GitHub löschen:
+   ```sh
    git push origin --delete feature/<feature-name>
    ```
 
