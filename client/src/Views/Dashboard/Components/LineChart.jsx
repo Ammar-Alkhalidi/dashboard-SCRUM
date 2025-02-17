@@ -8,6 +8,7 @@ import {
   Legend,
   CategoryScale,
   LinearScale,
+  Filler, // 🛠️ FILLER importieren!
 } from "chart.js";
 
 ChartJS.register(
@@ -16,7 +17,8 @@ ChartJS.register(
   Tooltip,
   Legend,
   CategoryScale,
-  LinearScale
+  LinearScale,
+  Filler // 🛠️ FILLER registrieren!
 );
 
 const LineChart = () => {
