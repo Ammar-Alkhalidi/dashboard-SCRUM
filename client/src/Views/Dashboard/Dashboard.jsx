@@ -1,9 +1,9 @@
 import React from "react";
 import "./Dashboard.css";
-import UserGroup from "../../assets/icons/user-group.svg?react";
-import Box from "../../assets/icons/box.svg?react";
-import ChartLine from "../../assets/icons/chart-line.svg?react";
-import ClockLeft from "../../assets/icons/clock-rotate-left.svg?react";
+import UserIcon from "../../assets/icons/icon-users.svg?react";
+import OrderIcon from "../../assets/icons/icon-orders.svg?react";
+import SalesIcon from "../../assets/icons/icon-sales.svg?react";
+import PendingIcon from "../../assets/icons/icon-pending.svg?react";
 import MetaCard from "./Components/MetaCard";
 import GraphComponent from "./Components/GraphComponent";
 import DealDetails from "./Components/DealDetails";
@@ -15,7 +15,7 @@ const Dashboard = () => {
       value: 40689,
       yesterday: 38231,
       str: "yesterday",
-      icon: <UserGroup className="meta-card-icon" />,
+      icon: <UserIcon className="meta-card-icon" />,
       classname: "total-user",
     },
     {
@@ -23,7 +23,7 @@ const Dashboard = () => {
       value: 10293,
       yesterday: 9823,
       str: "past week",
-      icon: <Box className="meta-card-icon" />,
+      icon: <OrderIcon className="meta-card-icon" />,
       classname: "total-order",
     },
     {
@@ -31,7 +31,7 @@ const Dashboard = () => {
       value: 89000,
       yesterday: 92000,
       str: "yesterday",
-      icon: <ChartLine className="meta-card-icon" />,
+      icon: <SalesIcon className="meta-card-icon" />,
       classname: "total-sales",
     },
     {
@@ -39,7 +39,7 @@ const Dashboard = () => {
       value: 2040,
       yesterday: 2000,
       str: "yesterday",
-      icon: <ClockLeft className="meta-card-icon" />,
+      icon: <PendingIcon className="meta-card-icon" />,
       classname: "total-pending",
     },
   ];
