@@ -3,6 +3,7 @@ import Dashboard from "./Views/Dashboard/Dashboard";
 import Products from "./Views/Products/Products";
 import OrderList from "./Views/OrderList/OrderList";
 import ToDo from "./Views/ToDo/ToDo";
+import Team from "./Views/Team/Team";
 
 const App = () => {
 
@@ -15,7 +16,7 @@ const App = () => {
       <Route path="/order-list" element={<OrderList />} />
       <Route path="/product-stock" element={<div>Product Stock</div>} />
       <Route path="/to-do" element={<ToDo />} />
-      <Route path="/team" element={<div>Team</div>} />
+      <Route path="/team" element={<Team />} />
     </Routes>
   );
 };
