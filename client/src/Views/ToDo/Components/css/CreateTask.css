@@ -1,0 +1,22 @@
+.create-task {
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid var(--light-grey);
+}
+
+.create-task-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 6px;
+  background-color: var(--sec-bg);
+  width: 30%;
+}
+
+.create-task-input:focus {
+  outline: none;
+}
+
+.create-task-input:focus::placeholder {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
