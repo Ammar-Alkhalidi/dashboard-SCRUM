@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./ToDo.css";
+import CreateTask from "./Components/CreateTask";
+import TaskList from "./Components/TaskList";
 
 const ToDo = () => {
   const [isAdding, setIsAdding] = useState(false);
@@ -16,6 +18,7 @@ const ToDo = () => {
           Add New Task
         </button>
       </div>
+      {isAdding ? <CreateTask /> : <TaskList />}
     </section>
   );
 };
