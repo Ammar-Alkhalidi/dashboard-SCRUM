@@ -49,3 +49,9 @@
 .star-reg {
   fill: var(--darker-grey);
 }
+
+.fav-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

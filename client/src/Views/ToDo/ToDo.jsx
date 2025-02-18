@@ -5,14 +5,37 @@ import TaskList from "./Components/TaskList";
 
 const ToDo = () => {
   const [isAdding, setIsAdding] = useState(false);
-  const changeEditMode = () => {
-    setIsAdding((prevState) => !prevState);
-  };
   const [tasks, setTasks] = useState([
     { id: 1, name: "test task", isFav: false, isDone: false },
   ]);
 
-  console.log(isAdding);
+  const changeEditMode = () => {
+    setIsAdding((prevState) => !prevState);
+  };
+
+  // Task als Favorit markieren/entfernen
+  const toggleFav = (id) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === id ? { ...task, isFav: !task.isFav } : task
+      )
+    );
+  };
+
+  // Task löschen
+  const deleteTask = (id) => {
+    setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+  };
+
+  // Task als erledigt markieren/entfernen
+  const toggleDone = (id) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === id ? { ...task, isDone: !task.isDone } : task
+      )
+    );
+  };
+
   return (
     <section className="todo">
       <div className="headline">
@@ -21,7 +44,11 @@ const ToDo = () => {
           Add New Task
         </button>
       </div>
-      {isAdding ? <CreateTask /> : <TaskList tasks={tasks}/>}
+      {isAdding ? (
+        <CreateTask />
+      ) : (
+        <TaskList tasks={tasks} toggleFav={toggleFav} deleteTask={deleteTask} toggleDone={toggleDone} />
+      )}
     </section>
   );
 };
