@@ -1,13 +1,15 @@
 import React from "react";
 import "./css/CreateTask.css";
 
-const CreateTask = () => {
+const CreateTask = ({ newTaskName, setNewTaskName }) => {
   return (
     <div className="create-task container">
       <input
         type="text"
-        placeholder="Write Your task name here"
+        placeholder="Write your task name here"
         className="create-task-input"
+        value={newTaskName}
+        onChange={(e) => setNewTaskName(e.target.value)}
       />
     </div>
   );

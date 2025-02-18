@@ -4,13 +4,29 @@ import CreateTask from "./Components/CreateTask";
 import TaskList from "./Components/TaskList";
 
 const ToDo = () => {
-  const [isAdding, setIsAdding] = useState(true);
+  const [isAdding, setIsAdding] = useState(false);
   const [tasks, setTasks] = useState([
     { id: 1, name: "test task", isFav: false, isDone: false },
   ]);
+  const [newTaskName, setNewTaskName] = useState(""); // Hier speichern wir die Eingabe
 
   const changeEditMode = () => {
     setIsAdding((prevState) => !prevState);
+    setNewTaskName(""); // Leert das Feld, wenn man den Modus wechselt
+  };
+
+  // Neue Task hinzufügen
+  const addTask = () => {
+    if (!newTaskName.trim()) return; // Leere Eingaben ignorieren
+    const newTask = {
+      id: Date.now(),
+      name: newTaskName,
+      isFav: false,
+      isDone: false,
+    };
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+    setIsAdding(false); // Zurück zur Task-Liste wechseln
+    setNewTaskName(""); // Feld leeren
   };
 
   // Task als Favorit markieren/entfernen
@@ -39,12 +55,20 @@ const ToDo = () => {
   return (
     <section className="todo">
       <div className="headline">
-        <h2> {isAdding ? "Add New To-Do" : "To-Do List"}</h2>
-        <button onClick={changeEditMode} className="add-task">
+        <h2>{isAdding ? "Add New To-Do" : "To-Do List"}</h2>
+        <button
+          onClick={isAdding ? addTask : changeEditMode}
+          className="add-task"
+        >
           {isAdding ? "Save" : "Add New Task"}
         </button>
       </div>
-      {isAdding ? <CreateTask /> : ""}
+
+      {isAdding ? (
+        <CreateTask newTaskName={newTaskName} setNewTaskName={setNewTaskName} />
+      ) : (
+        ""
+      )}
       <TaskList
         tasks={tasks}
         toggleFav={toggleFav}
