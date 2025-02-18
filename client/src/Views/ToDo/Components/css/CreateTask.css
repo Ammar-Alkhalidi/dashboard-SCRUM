@@ -1,6 +1,7 @@
 .create-task {
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--light-grey);
 }
 
 .create-task-input {
