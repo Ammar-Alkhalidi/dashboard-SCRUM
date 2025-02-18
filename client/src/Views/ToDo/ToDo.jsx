@@ -60,7 +60,7 @@ const ToDo = () => {
           onClick={isAdding ? addTask : changeEditMode}
           className="add-task"
         >
-          {isAdding ? "Save" : "Add New Task"}
+          {isAdding ? "Save" : "Add New ToDo"}
         </button>
       </div>
 
