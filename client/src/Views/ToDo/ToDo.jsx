@@ -1,10 +1,23 @@
-import React from 'react'
-import "./ToDo.css"
+import React, { useState } from "react";
+import "./ToDo.css";
 
 const ToDo = () => {
-  return (
-    <section className='todo'>ToDo</section>
-  )
-}
+  const [isAdding, setIsAdding] = useState(false);
+  const changeEditMode = () => {
+    setIsAdding((prevState) => !prevState);
+  };
 
-export default ToDo
+  console.log(isAdding);
+  return (
+    <section className="todo">
+      <div className="headline">
+        <h2>To-Do List</h2>
+        <button onClick={changeEditMode} className="add-task">
+          Add New Task
+        </button>
+      </div>
+    </section>
+  );
+};
+
+export default ToDo;
