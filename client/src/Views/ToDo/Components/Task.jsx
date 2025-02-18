@@ -1,7 +1,7 @@
 import React from 'react'
 import "./css/Task.css"
 
-const Task = () => {
+const Task = ({task}) => {
   return (
     <div>Task</div>
   )

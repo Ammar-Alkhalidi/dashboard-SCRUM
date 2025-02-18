@@ -1,10 +1,15 @@
-import React from 'react'
-import "./css/TaskList.css"
+import React from "react";
+import "./css/TaskList.css";
+import Task from "./Task";
 
-const TaskList = () => {
+const TaskList = ({ tasks }) => {
   return (
-    <div>TaskList</div>
-  )
-}
+    <div className="task-list">
+      {tasks.map((t) => {
+        return <Task task={t} />;
+      })}
+    </div>
+  );
+};
 
-export default TaskList
+export default TaskList;

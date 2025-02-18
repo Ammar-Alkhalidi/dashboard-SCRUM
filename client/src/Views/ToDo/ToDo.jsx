@@ -8,6 +8,9 @@ const ToDo = () => {
   const changeEditMode = () => {
     setIsAdding((prevState) => !prevState);
   };
+  const [tasks, setTasks] = useState([
+    { id: 1, name: "test task", isFav: false, isDone: false },
+  ]);
 
   console.log(isAdding);
   return (
@@ -18,7 +21,7 @@ const ToDo = () => {
           Add New Task
         </button>
       </div>
-      {isAdding ? <CreateTask /> : <TaskList />}
+      {isAdding ? <CreateTask /> : <TaskList tasks={tasks}/>}
     </section>
   );
 };
