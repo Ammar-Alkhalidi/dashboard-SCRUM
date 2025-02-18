@@ -4,7 +4,7 @@ import CreateTask from "./Components/CreateTask";
 import TaskList from "./Components/TaskList";
 
 const ToDo = () => {
-  const [isAdding, setIsAdding] = useState(false);
+  const [isAdding, setIsAdding] = useState(true);
   const [tasks, setTasks] = useState([
     { id: 1, name: "test task", isFav: false, isDone: false },
   ]);
@@ -39,16 +39,18 @@ const ToDo = () => {
   return (
     <section className="todo">
       <div className="headline">
-        <h2>To-Do List</h2>
+        <h2> {isAdding ? "Add New To-Do" : "To-Do List"}</h2>
         <button onClick={changeEditMode} className="add-task">
-          Add New Task
+          {isAdding ? "Save" : "Add New Task"}
         </button>
       </div>
-      {isAdding ? (
-        <CreateTask />
-      ) : (
-        <TaskList tasks={tasks} toggleFav={toggleFav} deleteTask={deleteTask} toggleDone={toggleDone} />
-      )}
+      {isAdding ? <CreateTask /> : ""}
+      <TaskList
+        tasks={tasks}
+        toggleFav={toggleFav}
+        deleteTask={deleteTask}
+        toggleDone={toggleDone}
+      />
     </section>
   );
 };
