@@ -1,0 +1,29 @@
+.team {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .header-team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .add-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.75rem ;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .team-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+  }
+  

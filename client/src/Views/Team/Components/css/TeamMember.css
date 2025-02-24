@@ -1,0 +1,35 @@
+.team-member {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 22%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+
+  
+  .team-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+   
+  }
+  
+ 
+  
+  .team-member p {
+    font-size: 14px;
+   
+  }
+  
+  .team-member a {
+    font-size: 12px;
+    color: var(--text-col);
+    text-decoration: none;
+  }
+  
