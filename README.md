@@ -117,4 +117,4 @@
 | Branch löschen (lokal) | `git branch -d <branch>` |
 | Branch löschen (remote) | `git push origin --delete <branch>` |
 
-🚀 Viel Erfolg beim Coden!
+🚀 Viel Erfolg beim Coden!# dashboard-SCRUM
