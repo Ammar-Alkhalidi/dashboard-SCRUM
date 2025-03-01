@@ -106,7 +106,6 @@
 ### **📌 Wichtige Git-Befehle auf einen Blick**
 | Aktion | Befehl |
 |--------|---------|
-Ammar
 | Repository klonen | `git clone <REPO-URL>` |
 | Neuen Branch erstellen | `git checkout -b feature/<name>` |
 | Branch wechseln | `git checkout <branch>` |
