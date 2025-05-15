@@ -102,7 +102,7 @@
 ✔️ Immer mit **`main` synchronisieren**, bevor eine neue Aufgabe begonnen wird.<br>
 
 ---
-A
+AAAA
 ### **📌 Wichtige Git-Befehle auf einen Blick**
 | Aktion | Befehl |
 |--------|---------|
